@@ -42,3 +42,14 @@ android {
 flutter {
     source = "../.."
 }
+
+
+subprojects {
+    afterEvaluate {
+        if (project.name == "webview_flutter_android") {
+            android {
+                namespace = "dev.fluttercommunity.plus.webviewflutter"
+            }
+        }
+    }
+}
